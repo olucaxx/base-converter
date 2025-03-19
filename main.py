@@ -46,9 +46,14 @@ def slice_binary(binary_digits, base):
 
     return grouped_bits
 
+
+def binary_to_another(binary_digits, base):
+    
+    binary_digits = [binary_digits[i] for i in range(len(binary_digits) - 1, 0 , -1)]
     
 
-print(slice_binary("111111111", 64))
+
+print(binary_to_another("111111110", 8))
 
 """
 binary -> quat

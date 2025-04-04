@@ -15,7 +15,7 @@ Aceita valores inteiros e fracionários, porém a precisão dos números decimai
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/olucaxx/base_converter
+   git clone https://github.com/olucaxx/base-converter
    cd base_converter
     ```
 2. (Opcional) Crie um ambiente virtual:

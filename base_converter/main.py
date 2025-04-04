@@ -1,5 +1,5 @@
 import argparse
-from decimal_conversor import another_to_decimal, decimal_to_another
+from base_converter.decimal_conversor import another_to_decimal, decimal_to_another
 
 def main():
     parser = argparse.ArgumentParser(description="Converts a number between different bases. Optimized for power-of-2 bases (e.g., 2, 4, 8, 16).")
@@ -9,6 +9,10 @@ def main():
     parser.add_argument('target_base', type=int, help="The base to convert the number into.")
 
     args = parser.parse_args()
+    
+    if args.original_base == 1 or args.target_base == 1:
+        print("Base 1 is not valid.")
+        return
 
     if args.original_base == 10:
         print(decimal_to_another(args.number, args.target_base))

@@ -55,7 +55,7 @@ def another_to_decimal(digits: str, original_base: int) -> str:
     
 
 def decimal_to_another(number: str, target_base: int) -> str:
-    number = float(number)
+    number = float(number.replace(",","."))
     integer, fractional = int(number), number - int(number) # separa a parte inteira da parte fracionária
     
     integer_half = list()
